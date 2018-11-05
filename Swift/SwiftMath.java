@@ -1,5 +1,3 @@
-package com.noahwilder.Swift;
-
 //
 //  ComputerScience
 //  SwiftMath
@@ -12,7 +10,7 @@ import java.math.BigDecimal;
 import java.util.Random;
 
 
-class SwiftMath extends SwiftConversion {
+class SwiftMath extends com.noahwilder.Swift.SwiftConversion {
 
     public static int lcm(final int x, final int y) {
         var a = x;

@@ -1,5 +1,3 @@
-package com.noahwilder.Swift;
-
 //
 //  ComputerScience
 //  Swift
@@ -8,9 +6,7 @@ package com.noahwilder.Swift;
 //  Copyright © 2018 Noah Wilder. All rights reserved.
 //
 
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 // Current top class
