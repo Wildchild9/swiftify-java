@@ -1,4 +1,4 @@
-package com.noahwilder.Swift;
+package Swift;
 
 /*
  *
@@ -13,6 +13,8 @@ package com.noahwilder.Swift;
  * file 'LICENSE.txt', which is part of this source code package.
  *
  */
+
+import Swift.SwiftArray;
 
 import java.util.ArrayList;
 

@@ -1,9 +1,9 @@
-package com.noahwilder.Swift;
+package Swift;
 
 /*
  *
  * SwiftRange.java
- * ComputerScience
+ * Swift
  *
  *
  * Last modified on 05/11/18 12:17 AM.

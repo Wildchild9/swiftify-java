@@ -1,4 +1,4 @@
-package com.noahwilder.Swift;
+package Swift;
 
 /*
  *

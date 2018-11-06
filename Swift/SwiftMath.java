@@ -1,9 +1,9 @@
-package com.noahwilder.Swift;
+package Swift;
 
 /*
  *
  * SwiftMath.java
- * ComputerScience
+ * Swift
  *
  *
  * Last modified on 05/11/18 5:40 PM.
