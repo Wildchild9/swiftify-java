@@ -1,10 +1,18 @@
-//
-//  ComputerScience
-//  Swift
-//
-//  Created by Noah Wilder on 2018-10-28.
-//  Copyright © 2018 Noah Wilder. All rights reserved.
-//
+package com.noahwilder.Swift;
+
+/*
+ *
+ * Swift.java
+ * ComputerScience
+ *
+ *
+ * Last modified on 05/11/18 5:40 PM.
+ *
+ * Copyright © 2018 Noah Wilder. All rights reserved.
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE.txt', which is part of this source code package.
+ *
+ */
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -16,11 +24,8 @@ class SwiftBase extends SwiftMath { }
 @SuppressWarnings({"FinalStaticMethod", "unused", "RedundantExplicitVariableType", "SingleStatementInBlock", "VariableArgumentMethod", "MethodCanBeVariableArityMethod"})
 public class Swift extends SwiftBase {
 
-    private static Byte number;
-
     // Allows Swift to be subclassed
     public Swift() { }
-
 
 
 //████████████████████████████████████████████████████████████████████████████████████████████████████████
@@ -30,11 +35,7 @@ public class Swift extends SwiftBase {
 
 //  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
 //  Method Testing Area
-    public static void main(String[] args) {
-
-//
-
-    }
+    public static void main(String[] args) { }
 
 //████████████████████████████████████████████████████████████████████████████████████████████████████████
 //██▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜████████████████████████████████████████████████████████████████████████████████
@@ -331,96 +332,8 @@ public class Swift extends SwiftBase {
             return this.sc.hasNext(s);
         }
 
-
     }
 
-
-//█████████████████████████████████████████████████████████████████████████████████████████████████████████
-//██▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜████████████████████████████████████████████████████████████████████████████████
-//██▌    Array Methods    ▐████████████████████████████████████████████████████████████████████████████████
-//██▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟████████████████████████████████████████████████████████████████████████████████
-
-
-//  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-//  Reduce Enumeration
-    public enum Operation {
-
-        addition {
-            @Override public int     apply(int     x, int     y) { return x + y; }
-            @Override public double  apply(double  x, double  y) { return x + y; }
-            @Override public long    apply(long    x, long    y) { return x + y; }
-        },
-
-        subtraction {
-            @Override public int     apply(int     x, int     y) { return x - y; }
-            @Override public double  apply(double  x, double  y) { return x - y; }
-            @Override public long    apply(long    x, long    y) { return x - y; }
-        },
-
-        multiplication {
-            @Override public int     apply(int     x, int     y) { return x * y; }
-            @Override public double  apply(double  x, double  y) { return x * y; }
-            @Override public long    apply(long    x, long    y) { return x * y; }
-        },
-
-        division {
-            @Override public int     apply(int     x, int     y) { return x / y; }
-            @Override public double  apply(double  x, double  y) { return x / y; }
-            @Override public long    apply(long    x, long    y) { return x / y; }
-        };
-
-        protected abstract int apply(int x, int y);
-        protected abstract double apply(double x, double y);
-        protected abstract long apply(long x, long y);
-    }
-
-//  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-//  Reduce Array Lists
-    public static final int    reduce(ArrayList<Integer> list, Operation operation, int    initialValue) {
-        for (int element : list) { initialValue = operation.apply(initialValue, element); }
-        return initialValue;
-    }
-    public static final double reduce(ArrayList<Double>  list, Operation operation, double initialValue) {
-        //noinspection SingleStatementInBlock
-        for (double element : list) { initialValue = operation.apply(initialValue, element); }
-        return initialValue;
-    }
-    public static final long   reduce(ArrayList<Long>    list, Operation operation, long   initialValue) {
-        //noinspection SingleStatementInBlock
-        for (long element : list) { initialValue = operation.apply(initialValue, element); }
-        return initialValue;
-    }
-
-//  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-//  Reduce Arrays
-    public static final int    reduce(int[]    arr, Operation operation, int    initialValue) {
-        for (int element : arr) { initialValue = operation.apply(initialValue, element); }
-        return initialValue;
-    }
-    public static final double reduce(double[] arr, Operation operation, double initialValue) {
-        for (double element : arr) { initialValue = operation.apply(initialValue, element); }
-        return initialValue;
-    }
-    public static final long   reduce(long[]   arr, Operation operation, long   initialValue) {
-        for (long element : arr) { initialValue = operation.apply(initialValue, element); }
-        return initialValue;
-    }
-
-//  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-//  Contains
-    @SuppressWarnings("Convert2streamapi")
-    public static final <T> boolean contains(ArrayList<T> arrayList, T value) {
-        for (T element : arrayList) {
-            if (value.equals(element)) { return true; }
-        }
-        return false;
-    }
-    public static final <T> boolean contains(T[] array, T value) {
-        for (T element : array) {
-            if (value.equals(element)) { return true; }
-        }
-        return false;
-    }
 
 //█████████████████████████████████████████████████████████████████████████████████████████████████████████
 //██▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜████████████████████████████████████████████████████████████████████████████████
@@ -450,3 +363,100 @@ public class Swift extends SwiftBase {
 ////▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀██████████████████████████████████████████████████████████████████████████████████████
 } //▌ END OF CLASS  ██████████████████████████████████████████████████████████████████████████████████████
 
+
+
+
+
+
+
+
+
+
+
+
+//█████████████████████████████████████████████████████████████████████████████████████████████████████████
+//██▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜████████████████████████████████████████████████████████████████████████████████
+//██▌     Old Methods     ▐████████████████████████████████████████████████████████████████████████████████
+//██▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟████████████████████████████████████████████████████████████████████████████████
+
+
+//  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+////  Reduce Enumeration
+//    public enum Operation {
+//
+//        addition {
+//            @Override public int     apply(int     x, int     y) { return x + y; }
+//            @Override public double  apply(double  x, double  y) { return x + y; }
+//            @Override public long    apply(long    x, long    y) { return x + y; }
+//        },
+//
+//        subtraction {
+//            @Override public int     apply(int     x, int     y) { return x - y; }
+//            @Override public double  apply(double  x, double  y) { return x - y; }
+//            @Override public long    apply(long    x, long    y) { return x - y; }
+//        },
+//
+//        multiplication {
+//            @Override public int     apply(int     x, int     y) { return x * y; }
+//            @Override public double  apply(double  x, double  y) { return x * y; }
+//            @Override public long    apply(long    x, long    y) { return x * y; }
+//        },
+//
+//        division {
+//            @Override public int     apply(int     x, int     y) { return x / y; }
+//            @Override public double  apply(double  x, double  y) { return x / y; }
+//            @Override public long    apply(long    x, long    y) { return x / y; }
+//        };
+//
+//        protected abstract int apply(int x, int y);
+//        protected abstract double apply(double x, double y);
+//        protected abstract long apply(long x, long y);
+//    }
+//
+////  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+////  Reduce Array Lists
+//    public static final int    reduce(ArrayList<Integer> list, Operation operation, int    initialValue) {
+//        for (int element : list.) { initialValue = operation.apply(initialValue, element); }
+//        return initialValue;
+//    }
+//    public static final double reduce(ArrayList<Double>  list, Operation operation, double initialValue) {
+//        //noinspection SingleStatementInBlock
+//        for (double element : list) { initialValue = operation.apply(initialValue, element); }
+//        return initialValue;
+//    }
+//    public static final long   reduce(ArrayList<Long>    list, Operation operation, long   initialValue) {
+//        //noinspection SingleStatementInBlock
+//        for (long element : list) { initialValue = operation.apply(initialValue, element); }
+//        return initialValue;
+//    }
+//
+////  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+////  Reduce Arrays
+//    public static final int    reduce(int[]    arr, Operation operation, int    initialValue) {
+//        for (int element : arr) { initialValue = operation.apply(initialValue, element); }
+//        return initialValue;
+//    }
+//    public static final double reduce(double[] arr, Operation operation, double initialValue) {
+//        for (double element : arr) { initialValue = operation.apply(initialValue, element); }
+//        return initialValue;
+//    }
+//    public static final long   reduce(long[]   arr, Operation operation, long   initialValue) {
+//        for (long element : arr) { initialValue = operation.apply(initialValue, element); }
+//        return initialValue;
+//    }
+//
+////  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+////  Contains
+//    @SuppressWarnings("Convert2streamapi")
+//    public static final <T> boolean contains(ArrayList<T> arrayList, T value) {
+//        for (T element : arrayList) {
+//            if (value.equals(element)) { return true; }
+//        }
+//        return false;
+//    }
+//    public static final <T> boolean contains(T[] array, T value) {
+//        for (T element : array) {
+//            if (value.equals(element)) { return true; }
+//        }
+//        return false;
+//    }

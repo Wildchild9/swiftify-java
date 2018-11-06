@@ -1,24 +1,24 @@
+package com.noahwilder.Swift;
+
 /*
  *
- * SwiftArray
- * Swift
+ * SwiftArray.java
+ * ComputerScience
  *
  *
- * Last modified on 05/11/18 10:19 AM.
+ * Last modified on 05/11/18 5:56 PM.
  *
  * Copyright © 2018 Noah Wilder. All rights reserved.
  * This file is subject to the terms and conditions defined in
  * file 'LICENSE.txt', which is part of this source code package.
  *
- *
  */
 
+import com.sun.jdi.IntegerValue;
+
 import java.util.*;
+import java.util.function.*;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @SuppressWarnings({"override", "unused"})

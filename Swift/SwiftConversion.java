@@ -1,10 +1,21 @@
-//
-//  ComputerScience
-//  SwiftConversion
-//
-//  Created by Noah Wilder on 2018-11-01.
-//  Copyright © 2018 Noah Wilder. All rights reserved.
-//
+package com.noahwilder.Swift;
+
+/*
+ *
+ * SwiftConversion.java
+ * ComputerScience
+ *
+ *
+ * Last modified on 05/11/18 5:55 PM.
+ *
+ * Copyright © 2018 Noah Wilder. All rights reserved.
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE.txt', which is part of this source code package.
+ *
+ */
+
+import java.util.ArrayList;
+
 
 class SwiftConversion {
 
@@ -276,5 +287,15 @@ class SwiftConversion {
     public static String String(Byte n) {
         return n.toString();
     }
+    public static <T> String String(T s) {
+        return s.toString();
+    }
 
+    // SwiftArray conversion methods
+    public static SwiftArray SwiftArray(ArrayList arrayList) {
+        return new SwiftArray(arrayList);
+    }
+    public static SwiftArray SwiftArray() {
+        return new SwiftArray();
+    }
 }
